@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <div className="bg-white shadow-sm p-4 flex justify-between items-center">
-      <h2 className="text-lg font-semibold">Dashboard</h2>
+      <h2 className="text-2xl font-bold">Dashboard</h2>
 
       <div className="flex items-center gap-4">
         <input

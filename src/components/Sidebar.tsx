@@ -1,3 +1,4 @@
+import { BiUser } from "react-icons/bi";
 import {
   FaChartPie,
   FaChartBar,
@@ -8,18 +9,20 @@ import {
   FaCog,
   FaSignOutAlt,
 } from "react-icons/fa";
-import {GiSpiralTentacle } from "react-icons/gi";
+import { GiSpiralTentacle } from "react-icons/gi";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   const menu = [
-    { name: "Dashboard", icon: <FaChartPie /> },
-    { name: "Leaderboard", icon: <FaChartBar /> },
-    { name: "Order", icon: <FaShoppingCart /> },
-    { name: "Products", icon: <FaBox /> },
-    { name: "Sales Report", icon: <FaFileAlt /> },
-    { name: "Messages", icon: <FaEnvelope /> },
-    { name: "Settings", icon: <FaCog /> },
-    { name: "Sign Out", icon: <FaSignOutAlt /> },
+    { name: "Dashboard", icon: <FaChartPie />, route: "/dashboard" },
+    { name: "Users", icon: <BiUser />, route: "/users" },
+    { name: "Leaderboard", icon: <FaChartBar />, route: "/leaderboard" },
+    { name: "Order", icon: <FaShoppingCart />, route: "/order" },
+    { name: "Products", icon: <FaBox />, route: "/products" },
+    { name: "Sales Report", icon: <FaFileAlt />, route: "/salesreport" },
+    { name: "Messages", icon: <FaEnvelope />, route: "/messages" },
+    { name: "Settings", icon: <FaCog />, route: "/settings" },
+    { name: "Sign Out", icon: <FaSignOutAlt />, route: "/signout" },
   ];
 
   return (
@@ -31,17 +34,19 @@ export default function Sidebar() {
         </div>
         <div className="flex flex-col gap-2">
           {menu.map((item, index) => (
-            <div
+            <NavLink
               key={index}
-              className={`flex items-center gap-3 p-2 rounded-lg cursor-pointer 
-              ${index === 0
+              to={item.route}
+              className={({ isActive }) =>
+                `flex items-center gap-3 p-2 rounded-lg ${isActive
                   ? "bg-indigo-500 text-white"
                   : "text-gray-600 hover:bg-gray-100"
-                }`}
+                }`
+              }
             >
               <span className="text-lg">{item.icon}</span>
               <span className="text-sm font-medium">{item.name}</span>
-            </div>
+            </NavLink>
           ))}
         </div>
       </div>
