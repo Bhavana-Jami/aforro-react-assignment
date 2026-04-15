@@ -1,4 +1,5 @@
 import { BiUser } from "react-icons/bi";
+import { BsDashCircleDotted, BsDashCircleFill } from "react-icons/bs";
 import {
   FaChartPie,
   FaChartBar,
@@ -9,12 +10,11 @@ import {
   FaCog,
   FaSignOutAlt,
 } from "react-icons/fa";
-import { GiSpiralTentacle } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   const menu = [
-    { name: "Dashboard", icon: <FaChartPie />, route: "/dashboard" },
+    { name: "Dashboard", icon: <FaChartPie />, route: "/" },
     { name: "Users", icon: <BiUser />, route: "/users" },
     { name: "Leaderboard", icon: <FaChartBar />, route: "/leaderboard" },
     { name: "Order", icon: <FaShoppingCart />, route: "/order" },
@@ -29,7 +29,7 @@ export default function Sidebar() {
     <div className="w-64 bg-white p-8 flex flex-col justify-between shadow-md">
       <div>
         <div className="flex">
-          <h1 className="text-xl font-bold mr-1.5 -mb-3"><GiSpiralTentacle /></h1>
+          <BsDashCircleFill className="text-xl font-bold mr-1.5 -mb-3"/>
           <h1 className="text-xl font-bold mb-6">Dabang</h1>
         </div>
         <div className="flex flex-col gap-2">

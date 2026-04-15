@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <main className="p-6 overflow-y-auto">
           <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
           </Routes>
         </main>
