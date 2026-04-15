@@ -5,10 +5,9 @@ export default function SalesSummary() {
         <div className="bg-white p-4 rounded-xl shadow">
             <div className="flex justify-between items-center mb-4">
                 <div>
-                    <h2 className="text-lg font-semibold">Today's Sales</h2>
+                    <h3 className="text-sm font-bold mb-1">Today's Sales</h3>
                     <p className="text-sm text-gray-500">Sales Summary</p>
                 </div>
-
                 <button className="border px-3 py-1 rounded-lg text-sm hover:bg-gray-100">
                     Export
                 </button>

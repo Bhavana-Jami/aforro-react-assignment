@@ -20,8 +20,8 @@ const data = [
 
 export default function RevenueChart() {
   return (
-    <div className="bg-white p-4 rounded-xl shadow h-80">
-      <h3 className="text-sm font-semibold mb-4">Total Revenue</h3>
+    <div className="bg-white p-4 rounded-xl shadow h-67">
+      <h3 className="text-sm font-bold mb-4">Total Revenue</h3>
       <ResponsiveContainer width="100%" height="85%">
         <BarChart data={data}>
           <XAxis dataKey="day" />

@@ -2,18 +2,38 @@ import RevenueChart from "../charts/RevenueChart";
 import SatisfactionChart from "../charts/SatisfactionChart";
 import TargetChart from "../charts/TargetChart";
 import VisitorChart from "../charts/VisitorChart";
+import SalesMap from "../components/SalesMap";
 import SalesSummary from "../components/SalesSummary";
+import TopProducts from "../components/TopProducts";
+import VolumeChart from "../components/VolumeChart";
 
 export default function Dashboard() {
     return (
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
-            <SalesSummary />
+        <div className="grid grid-cols-1 xl:grid-cols-6 gap-4">
+            <div className="xl:col-span-4">
+                <SalesSummary />
+            </div>
             <div className="xl:col-span-2">
+                <VisitorChart />
+            </div>
+            <div className="xl:col-span-2" >
                 <RevenueChart />
             </div>
-            <VisitorChart />
-            <SatisfactionChart />
-            <TargetChart />
+            <div className="xl:col-span-2">
+                <SatisfactionChart />
+            </div>
+            <div className="xl:col-span-2">
+                <TargetChart />
+            </div>
+            <div className="xl:col-span-2" >
+                <TopProducts />
+            </div>
+            <div className="xl:col-span-2">
+                <SalesMap />
+            </div>
+            <div className="xl:col-span-2">
+                <VolumeChart />
+            </div>
         </div>
     );
 }

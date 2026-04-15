@@ -45,7 +45,7 @@ export default function Sidebar() {
           ))}
         </div>
       </div>
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-4 rounded-xl text-center">
+      <div className="bg-linear-to-r from-indigo-500 to-purple-500 text-white p-4 rounded-xl text-center">
         <p className="text-sm mb-2">Dabang Pro</p>
         <p className="text-xs mb-3">Get access to all features</p>
         <button className="bg-white text-indigo-600 px-3 py-1 rounded-md text-sm font-medium">
