@@ -27,24 +27,42 @@ const data = [
 
 export default function TopProducts() {
     return (
-        <div className="bg-white p-4 rounded-xl shadow h-75">
+        <div className="bg-white p-4 rounded-xl shadow h-75 flex justify-center align-middle flex-col">
             <h3 className="text-sm font-bold mb-4">Top Products</h3>
-            <div className="space-y-4">
-                {data.map((item) => (
-                    <div key={item.id} className="grid grid-cols-4 items-center gap-2">
-                        <span className="text-gray-400 text-sm">{item.id}</span>
-                        <span className="text-sm text-gray-700">{item.name}</span>
-                        <div className="w-full bg-gray-200 h-2 rounded-full">
-                            <div
-                                className={`${item.color} h-2 rounded-full`}
-                                style={{ width: `${item.popularity}%` }}
-                            />
-                        </div>
-                        <span className="text-xs border px-2 py-1 rounded-lg text-gray-600 w-fit">
-                            {item.popularity}%
-                        </span>
-                    </div>
-                ))}
+            <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                    <thead className="text-gray-400 text-xs border-b border-gray-300">
+                        <tr>
+                            <th className="text-left pb-2">#</th>
+                            <th className="text-left pb-2">Name</th>
+                            <th className="text-left pb-2">Popularity</th>
+                            <th className="text-left pb-2">Sales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((item) => (
+                            <tr key={item.id} className="border-b border-gray-300 last:border-none">
+                                <td className="py-3 text-gray-400">{item.id}</td>
+                                <td className="py-3 text-gray-700">{item.name}</td>
+                                <td className="py-3 w-[40%]">
+                                    <div className="w-40 bg-gray-200 h-2 rounded-full">
+                                        <div
+                                            className={`${item.color} h-2 rounded-full`}
+                                            style={{ width: `${item.popularity}%` }}
+                                        />
+                                    </div>
+                                </td>
+                                <td className="py-3">
+                                    <span className={`text-xs border px-2 py-1 rounded-lg text-${item.color.slice(3)} h-2 rounded-full`}>
+                                        {item.popularity}%
+                                    </span>
+                                </td>
+
+                            </tr>
+                        ))}
+                    </tbody>
+
+                </table>
             </div>
         </div>
     );

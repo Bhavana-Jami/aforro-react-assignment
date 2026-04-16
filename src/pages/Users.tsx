@@ -18,7 +18,7 @@ export default function Users() {
     if (error) return <p className="text-red-500">{error}</p>;
 
     return (
-        <div className="bg-white p-4 rounded-xl shadow">
+        <div className="bg-white p-5 rounded-xl shadow">
             <h2 className="text-lg font-semibold mb-4">Users</h2>
             <div className="flex gap-3 mb-4 flex-wrap">
                 <input
