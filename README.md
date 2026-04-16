@@ -66,7 +66,7 @@ The application demonstrates **component-based architecture, clean UI design, an
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * React (Functional Components + Hooks)
 * TypeScript
