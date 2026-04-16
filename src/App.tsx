@@ -15,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
+            <Route path="*" element={<h1>No UI built for this route yet!</h1>} />
           </Routes>
         </main>
       </div>
