@@ -3,7 +3,7 @@
 ## Live Demo
 
 🔗 Deployed on Vercel:
-[](https://aforro-react-assignment.vercel.app/)
+[Dashboard](https://aforro-react-assignment.vercel.app/)
 
 ---
 
