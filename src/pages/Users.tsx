@@ -18,7 +18,7 @@ export default function Users() {
     if (error) return <p className="text-red-500">{error}</p>;
 
     return (
-        <div className="bg-white p-5 rounded-xl shadow">
+        <div className="bg-white p-5 rounded-xl shadow overflow-x-auto">
             <h2 className="text-lg font-semibold mb-4">Users</h2>
             <div className="flex gap-3 mb-4 flex-wrap">
                 <input
@@ -49,7 +49,7 @@ export default function Users() {
                     Sort: {sortOrder === "asc" ? "A-Z" : "Z-A"}
                 </button>
             </div>
-            <table className="w-full text-sm">
+            <table className="w-full text-sm overflow-x-auto">
                 <thead className=" text-left">
                     <tr>
                         <th className="p-4">Name</th>
